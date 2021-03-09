@@ -3,12 +3,14 @@ import React from 'react';
 class ConfigPage extends React.Component {
   constructor(props){
       super(props)
+
+      this.handleSubmit = this.props.handleSubmit.bind(this);
   }
 
   validate = (data) => {
-    console.log("got here")
+    console.log(data)
 
-    // this.props.handleSubmit;
+    this.props.handleSubmit();
   }
 
   render(){
@@ -58,6 +60,10 @@ class ConfigPage extends React.Component {
                     <input type="checkbox" name="constraints" value="vegan"/>Vegan<br/>
                     <input type="checkbox" name="constraints" value="vegetarian"/>Vegetarian<br/>
                     <input type="checkbox" name="constraints" value="nut-allergy"/>Nut Allergy<br/>
+                </p>
+
+                <p>
+                    <input type="submit" />
                 </p>
             </fieldset>
         </form>

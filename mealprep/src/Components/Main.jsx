@@ -5,18 +5,31 @@ class Main extends React.Component{
 
     constructor(props){
         super(props);
+
+        this.state = {
+            configured: false
+        }
     }
 
-    handleSubmit = (data) => {
-
+    handleSubmit = () => {
+        this.setState({
+            configured: true
+        })
     }
     
     render() { 
-        return(
-        <ConfigPage 
-        handleSubmit={this.handleSubmit} 
-        />
-        )
+
+        if(this.state.configured){
+
+            return(<div><h1>Configured</h1></div>)
+
+        }else{
+            return(
+                <ConfigPage 
+                handleSubmit={this.handleSubmit} 
+                />
+                )
+        }
     }
 }
 
