@@ -1,5 +1,5 @@
 import react from 'react'
-import Main from './Views/Main.jsx'
+import Main from './Components/Main.jsx'
 
 function App() {
     return ( <
