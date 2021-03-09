@@ -6,17 +6,15 @@ class ConfigPage extends React.Component {
   }
 
   validate = (data) => {
+    console.log("got here")
+
+    // this.props.handleSubmit;
   }
 
-
-  handleSubmit = (data) => {
-  };
-
   render(){
-    
     return(
         <div>
-        <form method="post">
+        <form method="post" onSubmit={this.validate}>
             <fieldset>
                 <legend>Nutritional Constraints</legend>
 

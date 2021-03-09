@@ -1,9 +1,10 @@
+import react from 'react'
 import './App.css';
-import ConfigPage from './Views/ConfigurationPage.jsx'
+import Main from './Views/Main.jsx'
 
 function App() {
     return ( <
-        ConfigPage / >
+        Main / >
     )
 }
 
