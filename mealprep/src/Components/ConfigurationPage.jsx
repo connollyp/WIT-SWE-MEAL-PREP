@@ -59,7 +59,6 @@ class ConfigPage extends React.Component {
                     <label>Dietary Constrains:</label><br/>
                     <input type="checkbox" name="constraints" value="vegan"/>Vegan<br/>
                     <input type="checkbox" name="constraints" value="vegetarian"/>Vegetarian<br/>
-                    <input type="checkbox" name="constraints" value="nut-allergy"/>Nut Allergy<br/>
                 </p>
 
                 <p>
