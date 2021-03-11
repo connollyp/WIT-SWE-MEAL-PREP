@@ -18,12 +18,12 @@ class LogInPage extends React.Component{
 
                         <p>
                             <label>Username:    </label>
-                            <input type="textfield" name="username" id="username"/>
+                            <input type="textfield" name="username" id="username" required={true}/>
                         </p>
 
                         <p>
                             <label>Password:    </label>
-                            <input type="password" name="password" id="password"/>
+                            <input type="password" name="password" id="password" required={true}/>
                         </p>
 
                         <p>

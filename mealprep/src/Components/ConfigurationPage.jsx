@@ -22,12 +22,12 @@ class ConfigPage extends React.Component {
 
                 <p>
                     <label>Number of meals per day:</label>
-                    <input type="number" name="num_meals" id="numMeals" required="true"/>
+                    <input type="number" name="num_meals" id="numMeals" required={true}/>
                 </p>
 
                 <p>
                     <label>Calories per day:</label>
-                    <input type="number" name="num_cals" id="calories" required="true"/>
+                    <input type="number" name="num_cals" id="calories" required={true}/>
                 </p>
 
                 <p>
