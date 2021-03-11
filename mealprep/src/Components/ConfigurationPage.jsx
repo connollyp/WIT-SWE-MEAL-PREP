@@ -7,10 +7,10 @@ class ConfigPage extends React.Component {
       this.handleSubmit = this.props.handleSubmit.bind(this);
   }
 
-  validate = (data) => {
-    console.log(data)
+  validate = () => {
 
     this.props.handleSubmit();
+    
   }
 
   render(){
