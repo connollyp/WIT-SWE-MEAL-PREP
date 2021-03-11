@@ -45,19 +45,14 @@ class Main extends React.Component{
 
     handleLogIn = () => {
 
-        this.setState({
-            username: document.getElementById("username").value,
-            password: document.getElementById("password").value
-        })
-        
-
-        //Should send to database to verify that its working
+        //Should send to database to verify that its working, if not set logged in to false and display error
         //Should make a log in controller for this
 
         this.setState({
+            username: document.getElementById("username").value,
+            password: document.getElementById("password").value,
             loggedIn: true
         })
-
     }
     
     render() { 
