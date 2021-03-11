@@ -22,43 +22,43 @@ class ConfigPage extends React.Component {
 
                 <p>
                     <label>Number of meals per day:</label>
-                    <input type="number" name="num_meals"/>
+                    <input type="number" name="num_meals" id="numMeals"/>
                 </p>
 
                 <p>
                     <label>Calories per day:</label>
-                    <input type="number" name="num_cals"/>
+                    <input type="number" name="num_cals" id="calories"/>
                 </p>
 
                 <p>
                     <label>Grams of protein per day:</label>
-                    <input type="number" name="num_protein"/>
+                    <input type="number" name="num_protein" id="protein"/>
                 </p>
 
                 <p>
                     <label>Grams of carbs per day:</label>
-                    <input type="number" name="num_carbs"/>
+                    <input type="number" name="num_carbs" id="carbs"/>
                 </p>
 
                 <p>
                     <label>Grams of fat per day:</label>
-                    <input type="number" name="num_fat"/>
+                    <input type="number" name="num_fat" id="fat"/>
                 </p>
 
                 <p>
                     <label>Grams of sugar per day:</label>
-                    <input type="number" name="num_sugar"/>
+                    <input type="number" name="num_sugar" id="sugar"/>
                 </p>
 
                 <p>
                     <label>Grams of fiber per day:</label>
-                    <input type="number" name="num_fiber"/>
+                    <input type="number" name="num_fiber" id="fiber"/>
                 </p>
 
                 <p>
                     <label>Dietary Constrains:</label><br/>
-                    <input type="checkbox" name="constraints" value="vegan"/>Vegan<br/>
-                    <input type="checkbox" name="constraints" value="vegetarian"/>Vegetarian<br/>
+                    <input type="checkbox" name="constraints" value="vegan" id="vegan"/>Vegan<br/>
+                    <input type="checkbox" name="constraints" value="vegetarian" id="vegetarian"/>Vegetarian<br/>
                 </p>
 
                 <p>
