@@ -20,27 +20,32 @@ connection.connect((err) => {
 
 app.use(cors());
 
-var response = {success: "false"};
-
 app.post('/login', (req, res) => {
-  //connection.query(`SELECT * FROM gainsday.User WHERE Username = ${req.query.username} AND Password = ${req.query.password}`, (err, resp) => {
-  connection.query(`SELECT * FROM gainsday.User`, (err, resp) => {	
-    if (err) {
-      console.log("error: ", err);
-      return;
-    }
+  var result = false;
+  var getDBInfo = function(callback) {
 
-    console.log(`SELECT * FROM gainsday.User WHERE Username = ${req.query.username} AND Password = ${req.query.password}`)
+  		let sql = 'SELECT * FROM gainsday.User WHERE Username = ' + String(req.query.username) + ' AND Password = ' + String(req.query.password);
+	  	connection.query(sql, (err, resp) => {	
+		    if (err) {
+		      console.log("error: ", err);
+		      return callback(err);
+		    }
 
-    if (resp.length) {
-      console.log("found user: ", resp[0]);
-      return
-    }
+		    console.log(sql)
 
-    console.log("user not found: ", resp);
-  });
+		    if (resp.length) {
+		      console.log("found user: ", resp[0]);
+		      result = true;
+		    }
 
-  res.send(response);
+		    callback(null, result);
+	  	});
+	}
+
+	getDBInfo(function (err, result) {
+		console.log({success: result})
+		res.send({success: result});
+	});
 });
 
 app.listen(8080, () => console.log('API is running on http://localhost:8080/login'));
