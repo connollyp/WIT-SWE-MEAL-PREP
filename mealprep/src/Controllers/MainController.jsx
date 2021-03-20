@@ -1,5 +1,5 @@
 import React from 'react';
-import ConfigPage from '../Components/ConfigurationPage.jsx';
+import ConfigPage from '../Views/ConfigurationPage.jsx';
 
 class MainController extends React.Component{
 

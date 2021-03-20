@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import LoginPage from '../Components/LoginPage.jsx'
+import LoginPage from '../Views/LoginPage.jsx'
 
 async function loginUser(url) {
     return fetch(url, {

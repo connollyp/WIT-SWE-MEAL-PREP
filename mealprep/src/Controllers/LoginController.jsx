@@ -1,5 +1,5 @@
 import React from 'react';
-import LoginPage from '../Components/LoginPage.jsx'
+import LoginPage from '../Views/LoginPage.jsx'
 import loginUser from '../Services/LoginUser.js'
 
 export default class LoginController extends React.Component {

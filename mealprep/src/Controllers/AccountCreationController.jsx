@@ -1,5 +1,5 @@
 import React from 'react';
-import CreateAccountPage from '../Components/CreateAccountPage.jsx'
+import CreateAccountPage from '../Views/CreateAccountPage.jsx'
 
 
 export default class AccountCreationController extends React.Component {
