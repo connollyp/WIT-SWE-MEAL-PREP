@@ -1,6 +1,6 @@
 import React from 'react';
 import LoginPage from '../Views/LoginPage.jsx'
-import loginUser from '../Services/LoginUser.js'
+import loginUser from '../Models/LoginUser.js'
 
 export default class LoginController extends React.Component {
     constructor(props){
