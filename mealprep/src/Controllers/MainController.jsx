@@ -1,7 +1,7 @@
 import React from 'react';
-import ConfigPage from './ConfigurationPage.jsx';
+import ConfigPage from '../Components/ConfigurationPage.jsx';
 
-class Main extends React.Component{
+class MainController extends React.Component{
 
     constructor(props){
         super(props);
@@ -59,4 +59,4 @@ class Main extends React.Component{
     }
 }
 
-export default Main;
+export default MainController;

@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Main from './Components/Main.jsx'
-import Login from './Components/Login';
+// import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import MainController from './Controllers/MainController.jsx'
+import AccountStatusController from './Controllers/AccountStatusController.jsx';
 
 function App() {
-	const [token, setToken] = useState();
+    const [loggedIn, isLoggedIn] = useState();
 
-	if (!token) {
-    	return <Login setToken={setToken} />
-  	}
+    if (!loggedIn) {
+        return <AccountStatusController isLoggedIn = { isLoggedIn }
+        />
+    }
 
     return ( <
-        Main / >
+        MainController / >
     )
 }
 
