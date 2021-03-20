@@ -35,6 +35,7 @@ class CreateAccountPage extends React.Component{
             <input type="password" onChange={e => this.setPassword(e.target.value)} />
           </label>
           <div>
+            <button type="submit" className="submit-btn">Cancel</button>
             <button type="submit" className="submit-btn">Submit</button>
           </div>
         </form>
