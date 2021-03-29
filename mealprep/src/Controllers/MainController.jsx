@@ -1,15 +1,13 @@
-import React from 'react'
-import ConfigPage from './ConfigurationPage.jsx';
-import LogInPage from './LogInPage.jsx'
+import React from 'react';
+import ConfigPage from '../Views/ConfigurationPage.jsx';
 
-class Main extends React.Component{
+class MainController extends React.Component{
 
     constructor(props){
         super(props);
 
         this.state = {
             configured: false,
-            loggedIn: false,
             username: '',
             password: '',
             constraints: {
@@ -42,44 +40,23 @@ class Main extends React.Component{
             }
         })
     }
-
-    handleLogIn = () => {
-
-        //Should send to database to verify that its working, if not set logged in to false and display error
-        //Should make a log in controller for this
-
-        this.setState({
-            username: document.getElementById("username").value,
-            password: document.getElementById("password").value,
-            loggedIn: true
-        })
-    }
-    
+   
     render() { 
 
-        if(this.state.loggedIn){
-            if(this.state.configured){
+        if(this.state.configured){
 
-                console.log(this.state);
+            console.log(this.state);
 
-                return(<div><h1>Configured</h1></div>)
-    
-            }else{
-                return(
-                    <ConfigPage 
-                    handleSubmit={this.handleSubmit} 
-                    />
-                    )
-            }
+            return(<div><h1>Configured</h1></div>)
+
         }else{
             return(
-            <LogInPage 
-            handleLogIn={this.handleLogIn}
-            />
-            )
+                <ConfigPage 
+                handleSubmit={this.handleSubmit} 
+                />
+                )
         }
-
     }
 }
 
-export default Main;
+export default MainController;
