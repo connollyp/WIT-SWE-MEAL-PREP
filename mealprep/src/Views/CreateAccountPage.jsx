@@ -42,8 +42,8 @@ class CreateAccountPage extends React.Component{
           </div>
           <section className="actions">
             <div className="submit-button">
-              <button type="submit" className="submit-btn">Cancel</button>
               <button type="submit" className="submit-btn">Submit</button>
+              <button type="submit" className="submit-btn">Cancel</button>
             </div>
           </section>
         </form>
