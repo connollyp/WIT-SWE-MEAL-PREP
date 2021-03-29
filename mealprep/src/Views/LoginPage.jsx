@@ -20,22 +20,30 @@ class LogInPage extends React.Component{
     return(
       <div className="modal">
         <div className="login-wrapper">
-        <h1>Please Log In</h1>
+        <h1>Log In</h1>
         <form onSubmit={this.handleSubmit}>
-          <label>
-            <p>Username:</p>
+          <div className="field">
+            <label>
+              <p>Username:</p>
+            </label>
             <input type="text" onChange={e => this.setUserName(e.target.value)} />
-          </label>
-          <label>
-            <p>Password:</p>
+          </div>
+          <div className="field">
+            <label>
+              <p>Password:</p>
+            </label>
             <input type="password" onChange={e => this.setPassword(e.target.value)} />
-          </label>
-          <div>
-            <button type="submit" className="submit-btn">Submit</button>
           </div>
-          <div>
-            <p>Need an account? <button className="btn info" onClick={() => { this.setAccountStatus(false) }}>Click Here</button></p>
-          </div>
+          <section className="actions">
+            <div className="submit-button">
+              <button type="submit" className="submit-btn">Submit</button>
+            </div>
+            <div className="links">
+              <p>Need an account?</p>
+              <br></br>
+              <a className="btn info" onClick={() => { this.setAccountStatus(false) }}>Click Here</a>
+            </div>
+          </section>
         </form>
       </div>
       </div>
