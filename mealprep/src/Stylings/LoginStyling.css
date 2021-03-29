@@ -1,27 +1,101 @@
 .modal {
-    justify-self: center;
+    margin: 0;
     width: 100%;
     height: 100%;
 }
 
-.submit-btn {
-    justify-content: center;
+.login-wrapper{
+    width: 40%;
+    margin: 30px 30%;
+    border-radius: 5px;
+    background: #ffffff;
+    box-shadow: 0px 1px 4px  #888888;
 }
 
-.btn {
+.login-wrapper h1{
+    text-align: center;
+    padding: 20px;
+}
+
+.field{
+  width: 100%;
+  padding: 10px 0px;
+}
+
+.field label{
+  display: block;
+  margin-left: 30%;
+}
+
+.field input{
+  margin-left: 30%;
+  width: calc(40% - 30px);
+  font-size: 12pt;
+  padding: 15px;
+}
+
+.actions{
+  margin: 0;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.actions .forgot-pw{
+  font-size: 16px;
+}
+
+.actions .submit-button{
+  margin:0;
+  text-align: center;
+}
+
+.actions button:hover { 
+  color: #ffffff; 
+}
+
+.actions button:active { 
+  color: #2e3638;
+  border: 1px solid #ffffff;
+}
+
+.actions button {
+  font-family: 'Raleway', sans-serif;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 1px solid #37d488;
+  padding: 10px 50px;
+  background-color: #37d488;
+  color: $light-background;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+  outline:none;
+}
+
+
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.links .btn {
     border: none;
-    background-color: inherit;
-    padding: 14px 28px;
     font-size: 16px;
     cursor: pointer;
-    display: inline-block;
+    background: #ffffff;
 }
 
 
 /* On mouse-over */
 
-.btn:hover {
-    background: #eee;
+.links .btn:hover {
+    color: #eee;
+    background: #ffffff;
 }
 
 .info {
