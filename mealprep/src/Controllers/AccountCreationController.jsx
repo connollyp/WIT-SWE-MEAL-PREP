@@ -1,5 +1,6 @@
 import React from 'react';
 import CreateAccountPage from '../Views/CreateAccountPage.jsx'
+import uploadNewUser from '../Models/UploadNewUser.js'
 
 
 export default class AccountCreationController extends React.Component {
@@ -16,37 +17,31 @@ export default class AccountCreationController extends React.Component {
     }
 
     setUserName = (username) => {
-
-        console.log(username)
-
         this.setState({
             username: username
         })
     }
 
     setPassword = (password) => {
-
-        console.log(password)
-
         this.setState({
             password: password
         })
     }
 
     setEmail = (email) => {
-
-        console.log(email);
-
         this.setState({
             email: email
         })
     }
 
     handleSubmit = async e => {
+        e.preventDefault();
+        var url = "http://localhost:8080/uploadNewUser?username='" + String(this.state.username) + "'&password='" + String(this.state.password) + "'&email='" + String(this.state.email) + "'";
+        const token = await uploadNewUser(url);
 
-        //TO-DO set it so it uploads new account credentials to the database
-
-        this.setAccountStatus(true)
+        if (token["success"] === true) {
+            this.setAccountStatus(true)
+        }
     }
 
     render(){
