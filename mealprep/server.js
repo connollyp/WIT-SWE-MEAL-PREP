@@ -22,8 +22,6 @@ app.use(cors());
 
 app.post('/login', (req, res) => {
     var result = false;
-    var maxUserID;
-
     var getDBInfo = function(callback) {
 
         let sql = 'SELECT * FROM gainsday.User WHERE Username = ' + String(req.query.username) + ' AND Password = ' + String(req.query.password);
@@ -75,6 +73,7 @@ app.post('/uploadNewUser', (req, res) => {
     var postDBInfo = function(callback) {
 
         let sql = "INSERT INTO gainsday.User (User_id, Username, Password, Email) VALUES (" + maxUserID + "," + String(req.query.username) + ", " + String(req.query.password) + ", " + String(req.query.email) + ");";
+
         connection.query(sql, (err, resp) => {
             if (err) {
                 console.log("error: ", err);
@@ -98,6 +97,38 @@ app.post('/uploadNewUser', (req, res) => {
         postDBInfo(function(err, result) {
             res.send({ success: true });
         });
+
+        console.log({ success: result })
+        res.send({ success: result });
+    });
+});
+
+app.get('/getFood', (req, res) => {
+
+    var result = false;
+    var getDBInfo = function(callback) {
+
+        let sql = "SELECT * FROM gainsday.Food WHERE Name LIKE %" + String(req.query.searchTerm) + "%";
+        connection.query(sql, (err, resp) => {
+            if (err) {
+                console.log("error: ", err);
+                return callback(err);
+            }
+
+            console.log(sql)
+
+            if (resp.length) {
+                console.log("found foods: ", resp);
+                result = true;
+            }
+
+            callback(null, result);
+        });
+    }
+
+    getDBInfo(function(err, result) {
+        console.log({ success: result })
+        res.send({ success: result });
     });
 });
 
