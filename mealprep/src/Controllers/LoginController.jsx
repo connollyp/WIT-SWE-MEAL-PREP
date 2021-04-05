@@ -16,18 +16,12 @@ export default class LoginController extends React.Component {
     }
 
     setUserName = (username) => {
-
-        console.log(username)
-
         this.setState({
             username: username
         })
     }
 
     setPassword = (password) => {
-
-        console.log(password)
-
         this.setState({
             password: password
         })
