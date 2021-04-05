@@ -74,7 +74,7 @@ app.post('/uploadNewUser', (req, res) => {
 
     var postDBInfo = function(callback) {
 
-        let sql = "INSERT INTO gainsday.User (User_id, Username, Password, First_Name, Last_Name, Email) VALUES (" + maxUserID + "," + String(req.query.username) + ", " + String(req.query.password) + ", 'TestName', 'TestName2', " + String(req.query.email) + ");";
+        let sql = "INSERT INTO gainsday.User (User_id, Username, Password, Email) VALUES (" + maxUserID + "," + String(req.query.username) + ", " + String(req.query.password) + ", " + String(req.query.email) + ");";
         connection.query(sql, (err, resp) => {
             if (err) {
                 console.log("error: ", err);
