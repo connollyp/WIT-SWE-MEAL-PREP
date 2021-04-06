@@ -1,5 +1,6 @@
 import React from 'react';
 import ConfigPage from '../Views/ConfigurationPage.jsx';
+import MainPage from '../Views/MainPage.jsx'
 
 class MainController extends React.Component{
 
@@ -47,8 +48,12 @@ class MainController extends React.Component{
 
             console.log(this.state);
 
-            return(<div><h1>Configured</h1></div>)
-
+            return(
+                <MainPage 
+                username={this.state.username} 
+                constraints={this.state.constraints}
+                />
+                )
         }else{
             return(
                 <ConfigPage 
