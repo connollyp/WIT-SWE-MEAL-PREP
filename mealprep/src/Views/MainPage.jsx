@@ -1,4 +1,5 @@
 import React from 'react';
+import FoodSearchController from '../Controllers/FoodSearchController.jsx'
 import '../Stylings/MainStylings.css'
 
 class MainPage extends React.Component{
@@ -67,9 +68,9 @@ class MainPage extends React.Component{
       )
     }else{
       return(
-        <div>
-          {this.state.searchQuery}
-        </div>
+        <FoodSearchController
+        searchQuery={this.state.searchQuery}
+        />
       )
     }
 
