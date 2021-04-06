@@ -10,6 +10,6 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE 3000 8080
 
-ENTRYPOINT npm start
+ENTRYPOINT npm start & node server.js
