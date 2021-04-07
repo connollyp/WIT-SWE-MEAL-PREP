@@ -2,6 +2,8 @@ import React from 'react';
 import getFood from '../Models/GetFood.js'
 
 import SearchResults from '../Views/SearchResults.jsx'
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 export default class FoodSearchController extends React.Component {
     constructor(props){
@@ -31,19 +33,35 @@ export default class FoodSearchController extends React.Component {
     render(){
 
         if(this.state.dataReturned){
-
-            console.log(this.state.results.success)
-
            return(
             <SearchResults 
             results={this.state.results.success}
+            retrieveSearchSelections={this.props.retrieveSearchSelections}
             />
             ) 
         }else{
             return(
-                <h1>
-                    Fetching search results...
-                </h1>
+                <div style={{
+                    height: '100%',
+                    width: '100%',
+                    alignItems: 'center',
+                    display: 'flex', 
+                    justifyItems: 'center', 
+                    justifyContent: 'center', 
+                    textAlign: 'center',
+                    verticalAlign: 'center',
+                    margin: 'auto',
+                    position: 'absolute',
+                    }}>
+
+                    <Loader
+                    type="Oval"
+                    color="#00BFFF"
+                    height={100}
+                    width={100}
+                    />
+
+                </div>
             )
         }
     }

@@ -20,6 +20,7 @@ import Remove from '@material-ui/icons/Remove';
 import SaveAlt from '@material-ui/icons/SaveAlt';
 import Search from '@material-ui/icons/Search';
 import ViewColumn from '@material-ui/icons/ViewColumn';
+import AddIcon from '@material-ui/icons/Add';
 
 const tableIcons = {
     Add: forwardRef((props, ref) => <AddBox {...props} ref={ref} />),
@@ -87,6 +88,13 @@ class SearchResults extends React.Component {
                         options={{
                             selection: true
                         }}
+                        actions={[
+                            {
+                              tooltip: 'Add to main view',
+                              icon: AddIcon,
+                              onClick: (evt, data) => this.props.retrieveSearchSelections(data)
+                            }
+                          ]}
                     />
                 </MuiThemeProvider>
             </div>

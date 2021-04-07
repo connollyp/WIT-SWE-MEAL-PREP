@@ -45,9 +45,6 @@ class MainController extends React.Component{
     render() { 
 
         if(this.state.configured){
-
-            console.log(this.state);
-
             return(
                 <MainPage 
                 username={this.state.username} 
