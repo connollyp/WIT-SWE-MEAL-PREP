@@ -19,7 +19,6 @@ node {
   
   stage('Pull image to EC2') {
     sshagent(credentials : ['gdp_aws_ssh']) {
-      sh "ssh -t -t -i mealprep/GDP.pem ubuntu@18.222.250.74"
       sh "ls"
       sh "docker -v"
     }
