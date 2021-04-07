@@ -6,7 +6,7 @@ node {
   }
   
   stage('Build image') {
-    app = docker.build("NodeApp", "./mealprep/")
+    app = docker.build("nodeapp", "./mealprep/")
   }
   
   stage('Push image') {
