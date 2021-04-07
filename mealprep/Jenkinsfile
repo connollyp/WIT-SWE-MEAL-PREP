@@ -18,6 +18,8 @@ node {
   }
   
   stage('Pull image to EC2') {
-    sh 'ssh -i mealprep/GDP.pem ubuntu@18.222.250.74'
+    sshagent(credentials : ['c38af766-d84e-4ca2-9170-6d9b180c33e1'] {
+      sh "echo pwd"
+    }
   }
 }
