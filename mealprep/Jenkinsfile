@@ -13,7 +13,8 @@ node {
     docker.withRegistry(
       'https://431260421084.dkr.ecr.us-east-2.amazonaws.com',
       'ecr:us-east-2:gdp.aws.credentials'){
-      app.push('latest')
+      def myImage = docker.build('gdp_docker_repository')
+      myImage.push('latest')
     }
   }
 }
