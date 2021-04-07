@@ -106,9 +106,10 @@ app.post('/uploadNewUser', (req, res) => {
 app.get('/getFood', (req, res) => {
 
     var result = false;
+    var value = req.query.query
+    value = value.slice(1, -1);
     var getDBInfo = function(callback) {
-
-        let sql = "SELECT * FROM gainsday.Food WHERE Name LIKE %" + String(req.query.searchTerm) + "%";
+        let sql = "SELECT * FROM gainsday.Food WHERE Name LIKE '%" + value + "%'"
         connection.query(sql, (err, resp) => {
             if (err) {
                 console.log("error: ", err);
@@ -119,7 +120,7 @@ app.get('/getFood', (req, res) => {
 
             if (resp.length) {
                 console.log("found foods: ", resp);
-                result = true;
+                result = resp;
             }
 
             callback(null, result);
