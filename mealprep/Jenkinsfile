@@ -18,9 +18,7 @@ node {
   }
   
   stage('Pull image to EC2') {
-    sshagent(credentials : ['gdp_aws_ssh']) {
-      sh "ls"
-      sh "docker -v"
+      $(aws ecr get-login --no-include-email --region us-east-2)
     }
   }
 }
