@@ -12,9 +12,11 @@ node {
   stage('Push image') {
     steps{
       script{
+        echo 'Running with Registry'
         docker.withRegistry(
           'https://431260421084.dkr.ecr.us-east-2.amazonaws.com/gdp_docker_repository',
           'ecr:us-east-2:gdp.aws.credentials'){
+          echo 'app.push stage'
           app.push('latest')
         }
       }
