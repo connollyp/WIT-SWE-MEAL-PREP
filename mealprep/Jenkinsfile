@@ -13,7 +13,7 @@ node {
     steps{
       script{
         docker.withRegistry(
-          'https://431260421084.dkr.ecr.us-east-2.amazonaws.com',
+          'https://431260421084.dkr.ecr.us-east-2.amazonaws.com/gdp_docker_repository',
           'ecr:us-east-2:gdp.aws.credentials'){
           app.push('latest')
         }
