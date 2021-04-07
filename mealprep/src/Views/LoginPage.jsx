@@ -39,9 +39,7 @@ class LogInPage extends React.Component{
               <button type="submit" className="submit-btn">Submit</button>
             </div>
             <div className="links">
-              <p>Need an account?</p>
-              <br></br>
-              <a className="btn info" onClick={() => { this.setAccountStatus(false) }}>Click Here</a>
+              <button className="accountButton" onClick={() => { this.setAccountStatus(false) }}>Need an account? Click Here</button>
             </div>
           </section>
         </form>

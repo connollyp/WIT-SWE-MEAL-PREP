@@ -31,9 +31,12 @@ export default class FoodSearchController extends React.Component {
     render(){
 
         if(this.state.dataReturned){
+
+            console.log(this.state.results.success)
+
            return(
             <SearchResults 
-            results={JSON.stringify(this.state.results.success)}
+            results={this.state.results.success}
             />
             ) 
         }else{

@@ -72,7 +72,7 @@ class SearchResults extends React.Component {
                         title="Search results"
                         icons={tableIcons}
                         columns={[
-                            { title: 'Name', field: 'name' },
+                            { title: 'Name', field: 'Name' },
                             { title: 'Calories', field: 'Calories' },
                             { title: 'Protein (g)', field: 'Protein' },
                             { title: 'Carbs (g)', field: 'Carbs' },
@@ -82,7 +82,7 @@ class SearchResults extends React.Component {
                             { title: 'Sugar (g)', field: 'Sugar'},
                             { title: 'Serving Size', field: 'Serving_Size'},
                             ]}
-                            data={[{ name: 'Blue Cheese', Calories: '353', Protein: '21.4', Carbs: '2.34', Mono_Sat_Fat: 7.778, Poly_Sat_Fat: '0.8', Fiber: '0', Sugar: '0', Serving_Size: '1 oz'}]}
+                            data={this.state.results}
                         options={{
                             selection: true
                         }}
