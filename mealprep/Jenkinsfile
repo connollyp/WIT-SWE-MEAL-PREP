@@ -17,7 +17,7 @@ node {
     }
   }
   
-  stage('Pull image to EC2'){
+  stage('Pull image to EC2') {
     ssh -i GDP.pem ubuntu@18.222.250.74
   }
 }
