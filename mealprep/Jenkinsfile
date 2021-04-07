@@ -11,9 +11,8 @@ node {
   
   stage('Push image') {
     docker.withRegistry(
-    'https://431260421084.dkr.ecr.us-east-2.amazonaws.com/gdp_docker_repository',
-    'ecr:us-east-2:gdp.aws.credentials'){
-     echo 'app.push stage'
-     app.push('latest')
+      'https://431260421084.dkr.ecr.us-east-2.amazonaws.com',
+      'ecr:us-east-2:gdp.aws.credentials'){
+      app.push('latest')
   }
 }
