@@ -57,6 +57,7 @@ const tableIcons = {
 class SearchResults extends React.Component {
   constructor(props){
       super(props)
+      this.wrapper = React.createRef();
 
       this.state = {
           results: this.props.results
