@@ -19,7 +19,7 @@ node {
   
   stage('Pull image to EC2') {
     sshagent(credentials : ['gdp_aws_ssh']) {
-      sh "cd /home/ubuntu"
+      sh "ssh"
       sh "ls"
       sh "docker -v"
     }
