@@ -18,7 +18,7 @@ node {
   }
   
   stage('Pull image to EC2') {
-      $(aws ecr get-login --no-include-email --region us-east-2)
+      sh 'aws ecr get-login --no-include-email --region us-east-2'
     }
   }
 }
