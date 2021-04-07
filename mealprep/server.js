@@ -99,7 +99,7 @@ app.post('/uploadNewUser', (req, res) => {
         });
 
         console.log({ success: result })
-        res.send({ success: result });
+            // res.send({ success: result });
     });
 });
 

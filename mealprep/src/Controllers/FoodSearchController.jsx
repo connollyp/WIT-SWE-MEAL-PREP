@@ -1,6 +1,8 @@
 import React from 'react';
 import getFood from '../Models/GetFood.js'
 
+import SearchResults from '../Views/SearchResults.jsx'
+
 export default class FoodSearchController extends React.Component {
     constructor(props){
         super(props);
@@ -30,9 +32,9 @@ export default class FoodSearchController extends React.Component {
 
         if(this.state.dataReturned){
            return(
-           <h3>
-               {JSON.stringify(this.state.results.success)}
-            </h3>
+            <SearchResults 
+            results={JSON.stringify(this.state.results.success)}
+            />
             ) 
         }else{
             return(
