@@ -9,6 +9,8 @@ class MainController extends React.Component{
 
         this.state = {
             configured: false,
+            firstName: '',
+            lastName: '',
             username: '',
             password: '',
             constraints: {
@@ -28,6 +30,8 @@ class MainController extends React.Component{
     handleSubmit = () => {
         this.setState({
             configured: true,
+            firstName: document.getElementById("firstName").value,
+            lastName: document.getElementById("lastName").value,
             constraints:{
                 numMeals: document.getElementById("numMeals").value,
                 calories: document.getElementById("calories").value,
@@ -36,8 +40,6 @@ class MainController extends React.Component{
                 fat: document.getElementById("fat").value,
                 sugar: document.getElementById("sugar").value,
                 fiber: document.getElementById("fiber").value,
-                vegan: document.getElementById("vegan").checked,
-                vegetarian: document.getElementById("vegetarian").checked
             }
         })
     }
@@ -45,9 +47,6 @@ class MainController extends React.Component{
     render() { 
 
         if(this.state.configured){
-
-            console.log(this.state);
-
             return(
                 <MainPage 
                 username={this.state.username} 

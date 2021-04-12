@@ -1,6 +1,6 @@
-export default async function getFood(searchTerm) {
+export default async function getFood(url) {
 
-    return fetch(searchTerm, {
+    return fetch(url, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'

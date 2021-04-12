@@ -7,9 +7,10 @@ import reportWebVitals from './reportWebVitals';
 const PORT = process.env.PORT || 3000
 
 ReactDOM.render( 
-    <React.StrictMode >
-    <App/>
-    </React.StrictMode>,
+    <React>
+      <App/>
+    </React>,
+
     document.getElementById('root')
 );
 
