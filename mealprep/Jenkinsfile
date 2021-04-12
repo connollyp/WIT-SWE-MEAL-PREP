@@ -16,8 +16,4 @@ node {
       app.push('latest')
     }
   }
-  
-  stage('Pull image to EC2') {
-     sh 'aws ecr get-login --no-include-email --region us-east-2'
-   }
 }
