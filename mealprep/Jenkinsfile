@@ -7,7 +7,6 @@ node {
   
   stage('Build image') {
     app = docker.build("nodeapp", "./mealprep/")
-    
   }
   
   stage('Push image to ECR') {
