@@ -5,7 +5,7 @@ import FoodSearchController from '../Controllers/FoodSearchController.jsx'
 import MaterialTable from 'material-table'
 
 import '../Stylings/MainStylings.css'
-import '../Stylings/SearchResultsStylings.css'
+import '../Stylings/SearchBarStylings.css'
 
 import AddBox from '@material-ui/icons/AddBox';
 import ArrowDownward from '@material-ui/icons/ArrowDownward';
@@ -89,16 +89,18 @@ class MainPage extends React.Component{
 
     if(!this.state.renderSearchPage){
       return(
-        <div>
-          <form onSubmit={this.handleSearchSubmit}>
-            <input
-              placeholder="Look up food..."
-              ref={input => this.search = input}
-              onChange={this.handleInputChange}
-              className="search"
-            />
-            <p className="search">{this.state.searchQuery}</p>
-          </form>
+        <div className="pageWrapper">
+          <div className="wrapper">
+            <form onSubmit={this.handleSearchSubmit}>
+              <Search className="icon"/>
+              <input
+                placeholder="Look up food..."
+                ref={input => this.search = input}
+                onChange={this.handleInputChange}
+                className="searchBar"
+              />
+            </form>
+          </div>
 
           <div className="tableDiv">
               <MaterialTable
