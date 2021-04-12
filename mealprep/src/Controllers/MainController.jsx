@@ -36,8 +36,6 @@ class MainController extends React.Component{
                 fat: document.getElementById("fat").value,
                 sugar: document.getElementById("sugar").value,
                 fiber: document.getElementById("fiber").value,
-                vegan: document.getElementById("vegan").checked,
-                vegetarian: document.getElementById("vegetarian").checked
             }
         })
     }

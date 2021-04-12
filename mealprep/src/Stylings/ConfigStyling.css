@@ -1,45 +1,43 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
-
 .back {
     justify-self: center;
     width: 100%;
     height: 100%;
-    background-color: #3e1f44;
-
 }
 
-.legend{
-   font-size: large;
-   justify-self: center;
+.legend {
+    font-size: large;
+    justify-self: center;
 }
+
 * {
-    box-sizing:border-box;
-  }
-  body {
-    margin:5px;
-    background-color: #fafafa;
-  }
-
-  input {
-    width:50%;
-    resize: vertical;
-    padding:5px;
-    margin-left: 2%;
-    border-radius:15px;
-    border:0;
-    box-shadow:4px 4px 10px rgba(0,0,0,0.06);
-    height:40px;
-  }
-  
-
-.config-wrapper{
-    width: 40%;
-    margin: 30px 30%;
-    border-radius: 3px;
-    background: #dcd6dd;
-    box-shadow: 0px 1px 4px  #888888;
+    box-sizing: border-box;
 }
 
+body {
+    margin: 5px;
+    background-color: #fafafa;
+}
+
+.configInput {
+    width: 50%;
+    resize: vertical;
+    padding: 8px;
+    border-radius: 15px;
+    border: 0;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+    height: 5%;
+    /* justify-self: center; */
+    float: right;
+}
+
+.config-wrapper {
+    width: 100%;
+    padding: 15px;
+    background: #dcd6dd;
+    box-shadow: 0px 1px 4px #888888;
+    display: inline-block;
+    justify-content: center;
+}
 
 .submit-btn {
     justify-content: center;
@@ -67,9 +65,14 @@
 
 
 /* Toggle Swtich */
+
 .switch {
     position: relative;
     display: inline-block;
     width: 40px;
     height: 34px;
-  }
+}
+
+.fieldWrapper {
+    justify-content: baseline;
+}
