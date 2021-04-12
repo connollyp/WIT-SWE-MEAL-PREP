@@ -24,11 +24,11 @@ class ConfigPage extends React.Component {
                         </div>
                         <p className="fieldWrapper">
                             <label>First Name:</label>
-                            <input className="configInput" type="string" placeholder="First Name" name="First_Name" id="First_Name" required={true} />   
+                            <input className="configInput" type="string" placeholder="First Name" name="First_Name" id="firstName" required={true} />   
                         </p>
                         <p className="fieldWrapper">
                             <label>Last Name:</label>
-                            <input className="configInput" type="string" placeholder="Last Name" name="Last_Name" id="Last_Name" required={true} />
+                            <input className="configInput" type="string" placeholder="Last Name" name="Last_Name" id="lastName" required={true} />
                         </p>
                         <p className="fieldWrapper">
                             <label>Age:</label>
