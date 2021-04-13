@@ -1,5 +1,4 @@
 import React from 'react'
-import GitHubLogo from '../Images/GitHub-Mark-64px.png'
 import '../Stylings/HeaderStylings.css'
 
 
