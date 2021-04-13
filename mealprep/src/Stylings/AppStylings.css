@@ -1,0 +1,9 @@
+.mainAppWrapper {
+	margin-top: 70px;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f5f8;
+}
