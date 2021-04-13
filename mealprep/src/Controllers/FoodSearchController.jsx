@@ -5,7 +5,7 @@ import SearchResults from '../Views/SearchResults.jsx'
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
-export default class FoodSearchController extends React.Component {
+class FoodSearchController extends React.Component {
     constructor(props){
         super(props);
 
@@ -67,3 +67,5 @@ export default class FoodSearchController extends React.Component {
     }
 
 }
+
+export default FoodSearchController;

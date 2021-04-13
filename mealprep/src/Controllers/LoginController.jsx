@@ -2,7 +2,7 @@ import React from 'react';
 import LoginPage from '../Views/LoginPage.jsx'
 import loginUser from '../Models/LoginUser.js'
 
-export default class LoginController extends React.Component {
+class LoginController extends React.Component {
     constructor(props){
         super(props);
 
@@ -50,3 +50,5 @@ export default class LoginController extends React.Component {
     }
 
 }
+
+export default LoginController;

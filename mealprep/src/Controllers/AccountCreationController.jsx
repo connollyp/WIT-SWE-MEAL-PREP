@@ -3,7 +3,7 @@ import CreateAccountPage from '../Views/CreateAccountPage.jsx'
 import uploadNewUser from '../Models/UploadNewUser.js'
 
 
-export default class AccountCreationController extends React.Component {
+class AccountCreationController extends React.Component {
     constructor(props){
         super(props);
 
@@ -57,3 +57,5 @@ export default class AccountCreationController extends React.Component {
     }
 
 }
+
+export default AccountCreationController;
