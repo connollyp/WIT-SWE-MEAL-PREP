@@ -11,21 +11,13 @@
     background-color: #A9A9A9;
 }
 
-.socialMediaWrapper {
-    padding-left: 10px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+.ft-social ul li {
+    float: right;
+    padding-right: 20px;
+    padding-top: 15px;
+    list-style: none;
 }
 
-.imageLinks {
+.imageLink {
     height: 35px;
-    padding-left: 3px;
-}
-
-.imageLinks:hover {}
-
-.memberWrapper {
-    padding-left: 10px;
-    display: block;
 }
