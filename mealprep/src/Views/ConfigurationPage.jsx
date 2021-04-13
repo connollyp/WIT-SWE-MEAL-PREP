@@ -17,7 +17,7 @@ class ConfigPage extends React.Component {
         return (
             <div className="back">
                 <div className="config-wrapper">
-                    <form method="post" onSubmit={this.validate}>
+                    <form method="post" onSubmit={this.validate} className="config-form">
                         <fieldset>
                             <div className="legend">
                             <legend>User Information</legend>
