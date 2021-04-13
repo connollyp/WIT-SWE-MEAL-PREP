@@ -1,15 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './App.js';
 import reportWebVitals from './reportWebVitals';
 
 const PORT = process.env.PORT || 3000
 
-ReactDOM.render( 
-    <React>
-      <App/>
-    </React>,
+ReactDOM.render( <
+    App / > ,
 
     document.getElementById('root')
 );

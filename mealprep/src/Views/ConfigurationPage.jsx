@@ -1,5 +1,6 @@
 import React from 'react';
 import '../Stylings/ConfigStyling.css'
+
 class ConfigPage extends React.Component {
     constructor(props) {
         super(props)
